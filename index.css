@@ -1,0 +1,63 @@
+#cover {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fafafa; /* Silakan ubah sesuai tema warna Anda */
+}
+
+.gambar img {
+  max-width: 100%;
+  height: auto;
+  max-height: 45vh; 
+  object-fit: contain;
+}
+
+.bungkus, #undangan {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 20px;
+}
+
+.Masukkan {
+  padding: 10px 15px;
+  width: 60%;
+  max-width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.buka, .lihat {
+  padding: 10px 20px;
+  margin-left: 10px;
+  margin: 20px auto;
+  background-color: #8b5e34; /* Silakan ubah sesuai tema warna Anda */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.buka:hover, .lihat:hover {
+  background-color: #6b4725;
+}
+
+/* Tampilan khusus untuk layar HP */
+@media (max-width: 480px) {
+  .Masukkan {
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  .buka {
+    margin-left: 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- hero -->
+    <div class="border" id="cover">
+      <!-- Foto di atas -->
+      <div class="gambar">
+        <img style="filter: drop-shadow(0 30px 30px rgba(0, 0, 0, 0.4));"
+          src="bahan/f4a60c8764bcacd985356220a84bc597-removebg-preview.png"
+          alt="Foto Undangan"/>
+      </div>
+
+      <!-- Form input Nama -->
+      <div class="bungkus" id="formNama">
+        <div style="margin-top: 20px">
+          <input
+            type="text"
+            id="namaTamu"
+            placeholder="Masukkan namamu"
+            class="Masukkan"
+          />
+          <button id="btnBuka" class="buka">Kirim</button>
+        </div>
+      </div>
+      <!-- Bagian undangan (tersembunyi awalnya) -->
+      <div id="undangan" class="text">
+        <h2>Undangan Pernikahan</h2>
+        <p>Halo, <span id="namaTampil"></span>!</p>
+        <p>
+          Kami mengundangmu ke pernikahan kami, dan <br />kehadiran
+          <span id="namaTampil2"></span> suatu kehormatan dan kebahagiaan <br />
+          bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan
+          doa restu.
+        </p>
+        <h3>Ferdy &amp; Anisa</h3>
+        <p>19 Juni 2025 – Weddings</p>
+        <p>
+          <button onclick="mulaiAudio()" class="lihat" id="lihatundangan">
+            Lihat Undangan
+          </button>
+        </p>
+      </div>
+    </div>
+    <!-- hero -->
+
+    <script src="index.js"></script>
+</body>
+</html>
