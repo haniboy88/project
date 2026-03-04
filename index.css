@@ -1,3 +1,7 @@
+body {
+  background-color: #a4a4a4;
+}
+
 #cover {
   min-height: 100vh;
   width: 100%;
@@ -8,17 +12,28 @@
   text-align: center;
   padding: 20px;
   box-sizing: border-box;
-  background-color: #fafafa; /* Silakan ubah sesuai tema warna Anda */
 }
 
 .gambar img {
   max-width: 100%;
   height: auto;
-  max-height: 45vh; 
+  max-height: 45vh;
   object-fit: contain;
 }
 
-.bungkus, #undangan {
+/* animasifoto */
+.text,
+.gambar {
+  transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.text:hover,
+.gambar:hover {
+  transform: translateY(-15px) scale(1.02);
+}
+
+.bungkus,
+#undangan {
   width: 100%;
   max-width: 500px;
   margin-top: 20px;
@@ -32,8 +47,8 @@
   border-radius: 5px;
   font-size: 16px;
 }
-
-.buka, .lihat {
+.buka,
+.lihat {
   padding: 10px 20px;
   margin-left: 10px;
   margin: 20px auto;
@@ -45,7 +60,8 @@
   font-size: 16px;
 }
 
-.buka:hover, .lihat:hover {
+.buka:hover,
+.lihat:hover {
   background-color: #6b4725;
 }
 
@@ -60,4 +76,28 @@
     margin-left: 0;
     width: 100%;
   }
+}
+
+.text {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.text::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.05)
+  );
+  pointer-events: none;
 }
