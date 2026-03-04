@@ -105,3 +105,18 @@ body {
 }
 
 
+/* animasi masuk */
+.bungkus, .gambar {
+  animation: smoothReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes smoothReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
