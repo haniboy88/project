@@ -119,3 +119,15 @@ document.getElementById('namaTamu').addEventListener('keypress', function(e) {
     bukaUndangan();
   }
 });
+
+function lihatUndangan() {
+  document.getElementById('cover').style.display = 'none';
+
+  const isi = document.querySelector('.isi');
+
+  isi.style.display = 'block'; // tampilkan dulu
+
+  setTimeout(() => {
+    isi.classList.add('show'); // baru animasi jalan
+  }, 10);
+}

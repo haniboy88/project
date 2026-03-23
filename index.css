@@ -1,8 +1,12 @@
 body {
   /* background-color: #898989; */
   background-image: url("bahan/5.jpg");
+
   min-height: 100vh;
+  z-index: 0;
 }
+
+
 
 #cover {
   min-height: 100vh;
@@ -104,9 +108,9 @@ body {
   pointer-events: none;
 }
 
-
 /* animasi masuk */
-.bungkus, .gambar {
+.bungkus,
+.gambar {
   animation: smoothReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
@@ -119,4 +123,37 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.isi {
+  display:none;
+}
+
+.isi {
+  opacity: 0;
+  transform: translateY(40px); /* posisi awal agak ke bawah */
+  transition: all 0.6s ease;
+  display: none;
+}
+
+.isi.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0); /* naik ke posisi normal */
+}
+
+.hal1 {
+  height: 100vh;      /* penuh 1 layar */
+  width: 380px;         /* tidak full ke kanan kiri */
+  margin: 0 auto;     /* biar tengah */
+  /* background: #b81313;   contoh */
+  border-radius: 20px;
+  margin: 10px;
+  background: rgba(17, 15, 15, 0.49);
+  border: 1px solid rgba(131, 118, 118, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); 
 }
